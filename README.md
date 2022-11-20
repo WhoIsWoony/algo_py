@@ -1,8 +1,9 @@
 # algo_py
-## Woony가 Baekjoon 알고리즘 문제를 Python으로 푸는 공간
+Woony가 Baekjoon 알고리즘 문제를 Python으로 푸는 공간
 
-## 1. 블로그 정리 [바로가기](https://whoiswoony.com/)
+## 1. 블로그 정리
 누군가에게 잘보이기 위함이 아니라 꾸준함 유지와 이후 복습을 위한 정리
+[바로가기](https://whoiswoony.com/)
 
  - 양식 간소화 : 문제요약, 문제접근, 코드
 
