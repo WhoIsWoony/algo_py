@@ -13,50 +13,42 @@ input = sys.stdin.readline              #Tip2 : 알고리즘용 빠른 읽기, �
 
 ### 문제풀이용 ###
 from collections import deque
-def solution(n, graph):
-
-    #3 2
-    #1 3
-    #2 3
-
-    #4 4
-    #1 2
-    #2 3
-    #3 4
-    #4 2
-
+def solution(V,E,graph):
+    global v
+    v = [0 for _ in range(V)]
     
-    v = [False for _ in range(n)]
-    
-    def bfs(s):
+    def bfs(start):
+        global v
         q = deque()
-        q.append(s)
+        q.append(start)
+        v[start] = 1
         while q:
             c = q.popleft()
-            v[c] = True
-            for nx in graph[c]:
-                if not v[nx]:
-                    q.append(nx)
-    cnt = 0
-    for s in range(n):
-        if not v[s]:
-            cnt+=1
-            if cnt == 2:
-                return "YES"
-            bfs(s)
+            for n in graph[c]:
+                if v[n] == 0:
+                    v[n] = -v[c]
+                    q.append(n)
+                elif v[n] == v[c]:
+                    return False
+        return True
 
-    return "NO"
+    for start in range(V):
+        if v[start] == 0:
+            result = bfs(start)
+            if not result:
+                return "NO"
+    return 'YES'
+    
         
 
 ### 입력 ###
-t = int(input())
-for _ in range(t):
-    n, e = map(int, input().split())
-    graph = [[] for _ in range(n)]
-    for _ in range(e):
+T = int(input())
+for t in range(T):
+    V, E = map(int, input().split())
+    graph = [[] for _ in range(V)]
+    for _ in range(E):
         v1, v2 = map(int, input().split())
         graph[v1-1].append(v2-1)
         graph[v2-1].append(v1-1)
-    print(solution(n, graph))
-    
-    
+
+    print(solution(V,E,graph))
