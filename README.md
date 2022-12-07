@@ -1,5 +1,6 @@
 # algo_py
 [![Solved.ac Profile](https://mazassumnida.wtf/api/v2/generate_badge?boj=whoiswoony)](https://solved.ac/WhoIsWoony/)
+
 Woony가 Baekjoon 알고리즘 문제를 Python으로 푸는 공간
 
 ## 1. 블로그 정리
