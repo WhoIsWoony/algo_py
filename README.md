@@ -1,6 +1,8 @@
 # algo_py
 Woony가 Baekjoon 알고리즘 문제를 Python으로 푸는 공간
 
+[![Solved.ac Profile](https://mazassumnida.wtf/api/v2/generate_badge?boj=whoiswoony)](https://solved.ac/WhoIsWoony/)
+
 ## 1. 블로그 정리
 누군가에게 잘보이기 위함이 아니라 꾸준함 유지와 이후 복습을 위한 정리
 
